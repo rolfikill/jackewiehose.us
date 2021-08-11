@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Olas blog</title>
+        <title>rolfikills blog</title>
     </head>
     <body>
-        <p>Halli-Hallo!</p>
-        <p>Es funktioniert!</p>
+        <p>Daaaamn!</p>
+
+        {% for post in posts %}
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+        {% endfor %}
     </body>
 </html>
